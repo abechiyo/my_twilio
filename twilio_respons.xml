@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+	<Gather timeout="10" numDigits="1" action="twilio_respons.php" >
+	    <Say voice="woman" language="ja-jp">
+	    	こんにちは　シーピーアイスタッフブログへようこそ
+	    </Say>
+	</Gather>
+</Response>

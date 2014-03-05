@@ -1,0 +1,7 @@
+AuthUserFile /usr/home/aa115zaox6/html/my_twilio/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Protected Area"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>
