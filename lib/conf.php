@@ -69,25 +69,6 @@ class Other_Functions extends My_Twilio_Settings
 		return $return_value_arr;
 	}
 
-	// audioファイルの保存
-	public function put_audio_file($url){
-
-		$path = $this->SERVER_ROOT_PATH . '/twilio_record_file.mp3';
-		 
-		// fopenでファイルポインタを開いてから、curlのCURLOPT_FILEオプションを使い、
-		// 対象ファイルを保存します。PHPのメモリリミットに関係せず、
-		// ファイルを保存することができるようになります。
-		$fp = fopen($path, 'w');
-		$ch = curl_init($url.'mp3');
-		// curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-		curl_setopt($ch, CURLOPT_FILE, $fp);
-		 
-		// curlレスポンスを取得
-		$data = curl_exec($ch);
-		curl_close($ch);
-		fclose($fp);
-	}
-
 	// ログデータ保存
 	public function put_log_data($log_data){
 		/* ログデータをファイルに保存 */
